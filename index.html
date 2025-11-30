@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Small Business  Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<header> Small Business Financial Dashboard</header>
+
+<div class="container">
+
+  <!-- Sales -->
+  <div class="card">
+    <h2>Add Daily Sales</h2>
+
+    <label>Sales Amount (₹):</label><br>
+    <input type="number" id="saleInput" placeholder="Enter sale amount">
+
+    <br>
+
+    <label>Date:</label><br>
+    <input type="date" id="saleDate">
+
+    <button id="addSaleBtn">Add Sale</button>
+  </div>
+
+  <!-- Expenses -->
+  <div class="card">
+    <h2>Add Daily Expenses</h2>
+
+    <label>Expense Amount (₹):</label><br>
+    <input type="number" id="expenseInput" placeholder="Enter expense">
+
+    <br>
+
+    <label>Date:</label><br>
+    <input type="date" id="expenseDate">
+
+    <button id="addExpenseBtn">Add Expense</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-box">
+    <div class="stat">
+      <h3>Total Sales</h3>
+      <span id="totalSales">₹0</span>
+    </div>
+
+    <div class="stat">
+      <h3>Total Expenses</h3>
+      <span id="totalExpenses">₹0</span>
+    </div>
+
+    <div class="stat">
+      <h3>Net Profit</h3>
+      <span id="netProfit">₹0</span>
+    </div>
+  </div>
+
+  <!-- Growth Chart -->
+  <div class="card">
+    <h2>Growth Chart</h2>
+    <canvas id="growthChart"></canvas>
+  </div>
+
+  <!-- Reset -->
+  <div class="card">
+    <h2>Reset Dashboard</h2>
+    <button id="clearAllBtn" class="reset-btn">Clear All Data</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
